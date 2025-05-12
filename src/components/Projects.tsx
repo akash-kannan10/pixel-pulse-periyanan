@@ -38,28 +38,6 @@ const projects: Project[] = [
     liveUrl: "https://urbanfix.example.com",
     githubUrl: "https://github.com/periyanan/urbanfix",
     featured: true
-  },
-  {
-    title: "DevPortfolio",
-    description: "Customizable developer portfolio template with dark mode, animations, and content management system.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Tailwind CSS", "Framer Motion", "Netlify CMS"],
-    githubUrl: "https://github.com/periyanan/devportfolio"
-  },
-  {
-    title: "ChatAnalyzer",
-    description: "Tool that uses NLP to analyze conversation sentiment and provides insights for customer service improvement.",
-    image: "/placeholder.svg",
-    technologies: ["Python", "Flask", "NLTK", "Hugging Face", "D3.js"],
-    githubUrl: "https://github.com/periyanan/chatanalyzer"
-  },
-  {
-    title: "TaskFlow",
-    description: "Drag-and-drop task management system with time tracking and productivity analytics.",
-    image: "/placeholder.svg",
-    technologies: ["Vue.js", "Vuex", "Express", "MongoDB", "Socket.io"],
-    liveUrl: "https://taskflow.example.com",
-    githubUrl: "https://github.com/periyanan/taskflow"
   }
 ];
 

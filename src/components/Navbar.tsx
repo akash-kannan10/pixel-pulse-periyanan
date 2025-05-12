@@ -43,7 +43,7 @@ const Navbar = () => {
           className="text-2xl font-heading font-bold text-gradient z-10"
           aria-label="Periyanan P"
         >
-          PP
+          Periyanan P
         </a>
 
         {/* Progress bar */}
