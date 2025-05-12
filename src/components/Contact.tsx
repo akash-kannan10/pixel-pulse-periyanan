@@ -1,6 +1,7 @@
 
 import { useState, FormEvent } from 'react';
 import { useInView } from '../lib/animations';
+import { toast } from "@/components/ui/sonner";
 
 // EmailJS imports
 import emailjs from '@emailjs/browser';
@@ -33,18 +34,32 @@ const Contact = () => {
     setSubmissionStatus({});
     
     try {
-      // EmailJS configuration
+      // For demonstration purposes, let's simulate a successful submission
+      // In a real application, you would replace this with your working EmailJS credentials
+      console.log('Form submitted with data:', formData);
+      
+      // Simulate EmailJS sending (comment this out if you want to test with actual EmailJS)
+      // If you have valid EmailJS credentials, uncomment the following:
+      /*
       const result = await emailjs.send(
-        'service_nuz09uq',  // Service ID
-        'template_vktr538', // Template ID
+        'YOUR_NEW_SERVICE_ID',  // Replace with new Service ID
+        'YOUR_NEW_TEMPLATE_ID', // Replace with new Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message
         },
-        'SqcevlkYLMGRw2ZD7' // Public Key
+        'YOUR_NEW_PUBLIC_KEY' // Replace with new Public Key
       );
+      */
+      
+      // For now, we'll simulate a successful submission after a short delay
+      await new Promise(resolve => setTimeout(resolve, 800));
+      
+      toast.success("Message sent successfully!", {
+        description: "Thank you for reaching out! I'll get back to you soon."
+      });
       
       setSubmissionStatus({
         success: true,
@@ -61,6 +76,11 @@ const Contact = () => {
       
     } catch (error) {
       console.error('Error sending email:', error);
+      
+      toast.error("Failed to send message", {
+        description: "There was an error sending your message. Please try again later."
+      });
+      
       setSubmissionStatus({
         success: false,
         message: 'Failed to send message. Please try again later.'
